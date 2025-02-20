@@ -1,0 +1,3140 @@
+/** === START: Common styles :START === */
+/** === START: Common styles :START === */
+
+/** === START: Paul Irish box-sizing border box for all elems :START === */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/** === END: Paul Irish box-sizing border box for all elems :END === */
+
+body {
+  margin: 0;
+  font-family:  "Helvetica", sans-serif;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.appHeader {
+   background-color: hsl(0, 0%, 92%);
+   color: white;
+}
+
+.appTitle {
+    color: hsl(320, 89%, 60%);
+    /*border: 2px solid black;*/
+}
+
+.summary {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(208, 100%, 77%);
+}
+
+.currentPaperMeta {
+  text-align: center;
+}
+
+.paperProgress {
+  cursor: pointer;
+  padding: 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+.paperProgress::-moz-range-track {
+  background: red;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paperProgress::-webkit-slider-runnable-track {
+  background: hsl(207, 100%, 74%);
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paperProgress:focus::-webkit-slider-runnable-track {
+  background: hsl(207, 100%, 74%);
+}
+
+.paperProgress::-moz-range-thumb {
+ -webkit-appearance: none;
+  border: none;
+  background: hsl(231, 60%, 50%);
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.paperProgress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  background: hsl(231, 60%, 50%);
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.paperProgress:focus {
+    outline: none;
+}
+
+.currentTimestamp {
+  color: hsl(231, 100%, 20%);
+}
+
+.paperDuration {
+  margin-left: 1px;
+  color: hsl(231, 100%, 20%);
+}
+
+.playlistDuration {
+  width: 24%;
+  text-align: center;
+}
+
+.playlistDurationEnded {
+  background-color: hsl(90, 100%, 31.9%);
+}
+
+.playlistCurrentTimestamp {
+  color: hsl(197, 100%, 29%);
+}
+
+.playlistCurrentTimestampEnded {
+  color: white;
+}
+
+.playlistDurationText {
+  color: white;
+}
+
+.itemsLabel {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.playlist {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.playlistNextImgDisabled {
+  cursor: default;
+}
+
+.playButton, .playButtonPause {
+  vertical-align: top !important;
+}
+
+a.playlistPrev:link, a.playlistPrev:visited,
+a.playlistNext:link, a.playlistNext:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a.playlistPrev:hover, a.playlistPrev:active,
+a.playlistNext:hover, a.playlistNext:active {
+    text-decoration: underline;
+}
+
+/* ===== START: The Paper list at the bottom of screen ===== */
+.MuiTableCell-root {
+  line-height: normal !important;
+}
+
+.paperDisplay {
+   border-bottom: none !important;
+}
+
+.paperTitle {
+  font-weight: 500;
+  font-family: "Nimbus Sans", sans-serif;
+}
+
+.paperAction {
+  background-color: hsl(231, 29%, 51%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.paperActionDelWrap {
+  display: inline-block;
+}
+
+.paperActionDel {
+  color: hsl(0, 0%, 44%) !important;
+}
+
+a.paperAction:link, a.paperAction:visited {
+  text-decoration: none;
+  /*color: gray;*/
+}
+
+a.paperAction:hover, a.paperAction:active {
+  text-decoration: underline;
+}
+
+.previewCloseLinkWrap {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paperPlayProgress {
+  cursor: pointer;
+  padding: 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+.paperPlayProgress::-moz-range-track {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: hsl(8, 30%, 94%);
+}
+
+.paperPlayProgress::-webkit-slider-runnable-track {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: hsl(8, 30%, 94%);
+}
+
+.paperPlayProgress:focus::-webkit-slider-runnable-track {
+  background: hsl(8, 30%, 94%);
+}
+
+.paperPlayProgress::-moz-range-thumb {
+  /*background: hsl(9, 100%, 80%);*/
+  background: hsl(231, 60%, 50%);
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.paperPlayProgress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /*background: hsl(9, 100%, 80%);*/
+  background: hsl(231, 60%, 50%);
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.paperPlayProgress:focus {
+    outline: none;
+}
+
+/** === END: Common styles :END === */
+
+/** === START: Mobile CSS :START === */
+/* Iphone size */
+@media screen and (max-width: 667px) {
+    body {
+      margin-bottom: 50px;
+    }
+
+    .appHeader {
+      background: linear-gradient(#b3dbff 15%, 95%, #f6dbee);
+      border-bottom: 1px solid hsl(320, 89%, 95%);
+      padding-top: 2px;
+      padding-bottom: 0px;
+      height: 75px;
+
+      position: relative; /* To allow for absolute posn of elems inside */
+    }
+
+    .appTitleWrap {
+      width: 100%;
+      margin-left: 11%;
+    }
+
+    .appTitleLink {
+      text-decoration: none;
+    }
+
+    .appTitle {
+      font-size: 34px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      font-family: "Times New Roman", serif;
+      word-spacing: 1px;
+      /*border: 2px solid black;*/
+    }
+
+    .headphones {
+      margin-left: 10px;
+      font-size: 25px;
+    }
+
+    .appCaption {
+      margin-top: 5px;
+      font-family: sans-serif;
+    }
+
+    .listenCaption {
+      display: inline-block;
+      font-size: 17px;
+      color: black;
+    }
+
+    .stayTuned {
+      word-spacing: 1.5px;
+      font-style: italic;
+      font-family: serif;
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    .stayTunedWith {
+      font-style: normal;
+      margin-left: 8px;
+      font-size: 14px;
+    }
+
+    .captionRes {
+      margin-left: 8px;
+      font-size: 19px;
+      letter-spacing: 1px;
+      font-family: serif;
+    }
+
+    .headerWhat {
+      position: absolute;
+      top: 32%;
+      left: 78%;
+      background-color: hsl(200, 50%, 50%);
+      color: hsl(0, 0%, 95%);
+      padding: 1px 7px 5px 8px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    a.headerWhatText, a.headerWhatText:link, a.headerWhatText:visited, a.headerWhatText:hover, a.headerWhatText:active {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      color: hsl(0, 0%, 95%);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a.headerWhatText:hover, a.headerWhatText:active {
+      text-decoration: underline;
+    }
+
+    .formErrorMsg {
+      color: hsl(0, 50%, 50%);
+    }
+
+    .faqPopup {
+      position: absolute;
+      top: 60px;
+      width: 340px;
+
+      background-color: hsl(0, 100%, 100%);
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 12px;
+
+      border: 2px solid hsl(349, 88%, 84%);
+      border-radius: 10px;
+    }
+
+    .faqCloseIcon {
+      float: right;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+
+    .faqQn {
+      font-size: 19px;
+      /*font-weight: bold;*/
+      color: hsl(214, 100%, 60%);
+    }
+
+    .faqAns {
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      /*text-align: justify;*/
+    }
+
+    .faqSubtext {
+      font-size: 14px;
+    }
+
+    .appNameText {
+      font-family: serif;
+      color: hsl(320, 89%, 60%);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .appNameTextFlow {
+      font-family: serif;
+      font-size: 19px;
+      color: hsl(320, 89%, 60%);
+      font-weight: bold;
+    }
+
+    .faqPic {
+      height: 130px;
+      width: 130px;
+      float: right;
+      margin-left: 15px;
+    }
+
+    .appAuthorName {
+      color: gray;
+      font-weight: bold;
+    }
+
+    .emailMsgWrap {
+    }
+
+    .emailMeMsg {
+      font-size: 17px;
+      font-weight: bold;
+      color: hsl(0, 0%, 50%);
+      margin-top: -10px;
+      line-height: 1.4;
+    }
+
+    .emailUpdateForm {
+      margin-top: 15px;
+    }
+
+    .emailUpdateInput {
+      margin-right: 10px;
+      height: 32px;
+    }
+
+    .emailUpdateButton {
+      text-transform: none !important;
+      font-size: 15px !important;
+    }
+
+    .thumbsUpEmoji {
+      font-size: 27px;
+    }
+
+    .preciousEmail {
+      color: hsl(0, 100%, 50%);
+      font-weight: bold;
+      font-style: italic;
+      font-family: serif;
+    }
+
+    .feedbackMsg {
+      font-size: 17px;
+      font-weight: bold;
+      margin-top: 25px;
+      color: hsl(214, 100%, 60%);
+      line-height: 1.4;
+    }
+
+    .feedbackFlex {
+      margin-top: 10px;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    div.feedbackFlex > * {
+      margin-left: 10px;
+    }
+
+    .faqClose {
+      margin-top: 27px;
+      text-align: center;
+    }
+
+    a.faqCloseLink, a.faqCloseLink:link, a.faqCloseLink:visited, a.faqCloseLink:hover, a.faqCloseLink:active {
+      font-size: 17px !important;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .summary {
+      background-color: hsl(208, 95%, 74%);
+      margin-top: 10px;
+      width: 94%;
+      min-height: 80px;
+      max-height: 275px;
+      border-radius: 8px;
+      padding-top: 2px;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      box-shadow: 2px 2px 5px 2px gray;
+    }
+
+    .playlistDuration {
+      font-size: 15px;
+
+      width: 55%;
+      max-width: 200px;
+      padding-top: 4px;
+      /*padding-bottom: 4px;*/
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+    }
+
+    .currentPaper {
+      padding-top: 5px;
+      margin-top: 5px;
+      background-color: hsl(208, 100%, 70%);
+    }
+
+    .currentPaperBasicInfo {
+      min-height: 128px;
+      max-height: 128px;
+      overflow: scroll;
+    }
+
+    .currentPaperTitleWrap {
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .currentPaperTitle {
+      font-weight: bold;
+      font-size: 17px;
+
+      color: hsl(200, 50%, 30%);
+
+      line-height: 1.4;
+    }
+
+    .currentPaperCats {
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    .currentPaperMeta {
+      margin-top: 10px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .currentPaperAuthors {
+      font-size: 13px;
+    }
+
+    .currentPaperLinksWrap {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-content: space-around;
+
+      margin-top: 0px;
+      line-height: 1;
+
+      /*border: 1px solid red;*/
+    }
+
+    a.currentPaperDel {
+      color: hsl(0, 0%, 40%, 0.8);
+      text-decoration: underline;
+      padding-left: 15px;
+      font-size: 14px;
+      vertical-align: sub;
+      cursor: pointer;
+    }
+
+    .paperProgressWrap {
+      padding-left: 30px;
+    }
+
+    .paperProgress {
+      width: 130px;
+      -webkit-appearance: none;
+      /*vertical-align: top;*/
+    }
+
+    .paperProgress::-moz-range-track {
+      width: 130px;
+      height: 15px;
+    }
+
+    .paperProgress::-moz-range-thumb {
+      height: 16px;
+      width: 5px;
+      background: hsl(231, 60%, 50%);
+    }
+
+    .paperProgress::-webkit-slider-runnable-track {
+      width: 130px;
+      height: 15px;
+      border: none;
+      background: hsl(207, 100%, 74%);
+    }
+
+    .paperProgress::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 5px;
+      margin-top: -1px;
+      background: hsl(231, 60%, 50%);
+    }
+
+    .paperProgress:focus {
+      outline: none;
+    }
+
+    .paperProgress:focus::-webkit-slider-runnable-track {
+      /*background: #ccc;*/
+    }
+
+    .currentTimestamp {
+      margin-right: 1px;
+      font-size: 12px;
+    }
+
+    .paperDuration {
+      margin-left: 1px;
+      font-size: 12px;
+    }
+
+    .currentPaperSpeedControl {
+      margin-left: 5px;
+      padding: 0 0 0 0;
+      background-color: hsl(208, 100%, 73%);
+      border-radius: 3px;
+    }
+
+    .currentPaperSpeedControl > .speedSelector > .MuiSelect-selectMenu {
+      padding-right: 5px;
+      margin-right: 14px;
+
+      font-size: 12px;
+
+      color: white;
+    }
+
+    a.currentPaperLink {
+      font-size: 14px;
+      color: hsl(8, 100%, 28%);
+      letter-spacing: 1px;
+
+      padding-left: 40px;
+      cursor: pointer;
+    }
+
+    .pipeSeparator {
+      display: none;
+    }
+
+    .currentPaperArxivLink {
+      font-size: 14px;
+      color: hsl(240, 100%, 50%);
+      letter-spacing: 1px;
+      padding-left: 40px;
+    }
+
+    .playlistButtonWrap {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .MuiButton-containedPrimary {
+      vertical-align: middle;
+    }
+
+    .emptyPlayListWrap {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+
+      background-color: hsl(0, 100%, 100%);
+
+      padding-top: 5px;
+
+      /* To ensure color stays same till next elem.
+       * If instead I use margin-top on next elem, then default body bkgd will show through
+      */
+      padding-bottom: 10px;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 5px;
+
+      /*border: 1px solid red;*/
+    }
+
+    .emptyPlaylist {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .emptyPlayUiListEm {
+      color: hsl(329, 90%, 60%);
+    }
+
+    .emptyPlaylistPlay {
+      margin-right: 10px !important;
+    }
+
+    .emptyPlaylistReadMore {
+      display: none;
+    }
+
+    .emptyPlaylistPlay {
+      height: 25px !important;
+      margin-right: 10px !important;
+    }
+
+    .podcastsWrap {
+      margin-top: 15px;
+    }
+
+    .podcastSubPointer {
+      font-size: 14px !important;
+      text-transform: none !important;
+      background-color: hsl(326, 70%, 61%) !important;
+      font-weight: bold;
+      color: white;
+    }
+
+    .itemsLabel {
+      font-size: 1.2em;
+    }
+
+    .mainContentArea {
+      margin-top: 5px;
+    }
+
+    .paperListNav {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-end;
+
+      background-color: hsl(30, 50%, 92%);
+      padding-top: 2px;
+      padding-bottom: 2px;
+      width: 98%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .paperListNavCenter {
+      justify-content: center;
+    }
+
+    .paperListNavBottom {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      /*background-color: hsl(30, 50%, 92%);*/
+      margin-top: 10px;
+      /*padding-top: 10px;*/
+      /*padding-bottom: 2px;*/
+      width: 98%;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .catSelectWrapTop {
+      /*border: 1px solid red;*/
+    }
+
+    .categoriesLabel {
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 14px;
+      vertical-align: sub;
+      color: hsl(329, 90%, 60%);
+
+      display: none;
+    }
+
+    .catSelector {
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+
+    .catSelector.MuiInput-underline::after, .catSelector.MuiInput-underline::before {
+      border-bottom: none !important;
+    }
+
+    .catListItemLabel {
+      font-size: 12px !important;
+      vertical-align: sub !important;
+    }
+
+    .catSelectInput {
+      padding: 0 !important;
+      padding-right: 24px !important;
+    }
+
+    .catApplyButton {
+      margin-left: 20px !important;
+    }
+
+    .categoriesHeader {
+      font-size: 12px;
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+
+    .categoryNavLink, .categoryNavLinkCurrent, .categoryNavLinkAll {
+      text-decoration: underline;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 15px;
+      color: hsl(120, 85%, 35%);
+    }
+
+    .categoryNavLinkAll {
+      color: hsl(0, 50%, 50%);
+    }
+
+    .categoryNavLinkCurrent {
+      text-decoration: none;
+      color: gray;
+    }
+
+    .searchInput {
+      margin-left: 25px;
+      height: 22px;
+      width: 90px;
+      font-size: 15px;
+    }
+
+    .searchInputOnly {
+      display: inline-block;
+      align-self: center;
+    }
+
+    .searchBtn {
+      margin-left: 5px !important;
+      text-transform: none !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      height: 25px !important;
+      min-width: 60px !important;
+    }
+
+    .searchDisplayMessage {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+    }
+
+    .searchShowMsg {
+      font-size: 15px;
+    }
+
+    .searchDisplayQuery {
+      font-size: 15px;
+      color: hsl(0, 0%, 20%);
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    a.searchClearLink, a.searchClearLink:link, a.searchClearLink:visited, a.searchClearLink:hover, a.searchClearLink:active  {
+      margin-left: 20px;
+      font-size: 14px;
+      color: hsl(0, 100%, 39%);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .trackChangeIconPrevWrap {
+      display: inline-block;
+      width: 30px;
+      margin-right: 35px;
+      padding-top: 5px;
+    }
+
+    .trackChangeIconNextWrap {
+      display: inline-block;
+      width: 30px;
+      margin-left: 35px;
+      padding-top: 5px;
+    }
+
+    .playlistNextImg {
+      max-width: 100%;
+    }
+
+    .playButton, .playButtonPause {
+      font-size: 12px;
+    }
+
+    .playButtonPause {
+      width: 50px;
+    }
+
+    a.playlistPrev:link, a.playlistPrev:visited,
+    a.playlistNext:link, a.playlistNext:visited {
+    }
+
+    a.playlistPrev:hover, a.playlistPrev:active,
+    a.playlistNext:hover, a.playlistNext:active {
+    }
+
+    .pagerBoxWrapCommon {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pagerBoxWrapTop {
+        /*border: 1px solid red;*/
+    }
+
+    .pagerBoxWrapBottom {
+      background-color: none;
+    }
+
+    .pagerBox {
+      align-self: center;
+      padding: 0;
+    }
+
+    .pagerNextPrev.MuiButton-root.MuiButton-text {
+      text-transform: none !important;
+
+      color: hsl(345, 80%, 40%) !important;
+      font-weight: bold;
+      font-size: 12px !important;
+      padding: 0;
+    }
+
+    .pagerNextPrev.MuiButton-root.MuiButton-text.Mui-disabled {
+      color: hsl(345, 80%, 80%) !important;
+    }
+
+    .pagerNextPrev:active,.pagerNextPrev:focus {
+    }
+
+    .pagerNextPrevDisabled {
+      visibility: hidden;
+    }
+
+    .pagerNextPrevBottom.MuiButton-root.MuiButton-text {
+      font-size: 16px !important;
+    }
+
+    .pagerText {
+      margin-left: 2px;
+      font-size: 12px;
+      color: gray;
+    }
+
+    .pagerTextBottom {
+      font-size: 16px;
+    }
+
+    .pagerNext {
+      margin-left: 5px;
+    }
+
+    /* ===== START: The list of papers in the main content area :START ===== */
+    .paperDisplay {
+    }
+
+    .playlist {
+      /*margin-top: 5px !important;*/
+      padding: 0 !important;
+      margin-left: 6px !important;
+      width: 97.5% !important;
+      background-color: hsl(208, 100%, 95%) !important;
+      border-right: 2px solid hsl(0, 0%, 80%);
+      border-top: 1px solid hsl(0, 0%, 90%);
+    }
+
+    .MuiTableCell-root {
+      padding: 8px 10px 0px 12px !important;
+    }
+
+    tbody.MuiTableBody-root tr {
+      border-bottom: 1px solid hsl(240, 50%, 90%);
+    }
+
+    tbody.MuiTableBody-root tr:nth-child(odd) {
+      background-color: hsl(240, 50%, 96%);
+      border-left: 3px solid hsl(234, 50%, 78%);
+    }
+
+    tbody.MuiTableBody-root tr:nth-child(even) {
+      background-color: hsl(38, 54%, 96%);
+      border-left: 3px solid hsl(42, 100%, 70%);
+    }
+
+    .paperTitleRow {
+      line-height: 1.6;
+    }
+
+    .paperTitle {
+      font-size: 17px;
+    }
+
+    .paperlistDurationInfo {
+      font-size: 12px;
+    }
+
+    .paperCategories {
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    .paperMeta {
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .paperSource {
+      font-size: 14px;
+      /*color: hsl(329, 90%, 60%);*/
+      color: hsl(346, 70%, 50%);
+      font-weight: 550;
+    }
+
+    .sourceAuthorSeparator {
+      margin-left: 5px;
+      margin-right: 5px;
+      color: hsl(0, 0%, 65%);
+    }
+
+    .paperAuthors {
+      font-size: 13px;
+    }
+
+    a.paperAuthorsEllipsis:link, a.paperAuthorsEllipsis:visited {
+      font-size: 20px;
+      margin-left: 5px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .actionLinks {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      margin-top: 8px;
+      padding: 0 0 0 0;
+      line-height: 2.8;
+
+      /*border: 1px solid red;*/
+    }
+
+    .paperActionWrap {
+      /* Wide enough to allow for width of "Remove from Playlist" button */
+      width: 160px;
+
+      /*border: 1px solid red;*/
+      /*padding-top: 3px;*/
+    }
+
+    .paperAction {
+      font-size: 14px !important;
+
+      /*background-color: hsl(215, 100%, 96%) !important;*/
+      /*color: darkblue !important;*/
+
+      background-color: hsl(220, 100%, 94%) !important;
+      color: black !important;
+
+      text-decoration: none !important;
+      text-transform: none !important;
+
+      padding-top: 1px !important;
+      padding-bottom: 0px !important;
+      padding-right: 8px !important;
+      padding-left: 8px !important;
+    }
+
+    .paperActionDelWrap {
+      /*padding-top: 5px;*/
+    }
+
+    .paperActionDel {
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      text-decoration: underline;
+      color: gray !important;
+    }
+
+    a.paperAction:link, a.paperAction:visited, a.paperAction:hover, a.paperAction:active {
+    }
+
+    .perPaperPlayer {
+    }
+
+    .paperActionListenWrap {
+    }
+
+    .paperActionListen, .paperActionPause {
+      color: hsl(0, 0%, 100%) !important;
+      font-size: 12px !important;
+      font-weight: bold !important;
+      letter-spacing: 1.5px !important;
+
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+
+      min-width: 60px !important;
+    }
+
+    .paperActionListen {
+      background-color: hsl(231, 29%, 51%) !important;
+    }
+
+    .paperActionPause {
+      background-color: hsl(170, 70%, 32%) !important;
+    }
+
+    .paperPlayBtnImg {
+      height: 30px;
+      width: 30px;
+      vertical-align: middle;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .paperPlay {
+    }
+
+    .paperPlayProgress {
+      width: 180px;
+      -webkit-appearance: none;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .paperPlayProgress::-moz-range-track {
+      width: 180px;
+      height: 12px;
+    }
+
+    .paperPlayProgress::-webkit-slider-runnable-track {
+      width: 180px;
+      height: 12px;
+      border: none;
+    }
+
+    .paperPlayProgress::-moz-range-thumb {
+      height: 12px;
+      width: 3px;
+    }
+
+    .paperPlayProgress::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 12px;
+        width: 3px;
+    }
+
+    .paperPlayProgress:focus {
+        outline: none;
+    }
+
+    .paperPlayCurrentTs {
+      margin-left: 5px;
+    }
+
+    .paperPlayCurrentTs, .paperPlayDurationTs {
+    }
+
+    .speedSelector {
+      margin-left: 10px;
+    }
+
+    .speedSelector.MuiInput-underline::after, .speedSelector.MuiInput-underline::before {
+      border-bottom: none !important;
+    }
+
+    .paperListMoreInfo {
+      display: inline-block;
+      margin-left: 5px;
+      /*border: 1px solid red;*/
+      /*padding-top: 5px;*/
+    }
+
+    a.paperPreviewLink, a.paperPreviewLink:link, a.paperPreviewLink:visited,
+    a.paperPreviewLink:hover, a.paperPreviewLink:active {
+      cursor: pointer;
+      text-decoration: underline;
+      color: black;
+      /*color: hsl(8, 100%, 28%);*/
+    }
+
+    .absArxSeparator {
+      display: none;
+    }
+
+    .paperListSourceLink {
+      margin-left: 30px;
+      color: hsl(20, 60%, 50%);
+    }
+
+    a.paperListSourceLink:visited {
+      margin-left: 30px;
+      color: hsl(20, 40%, 50%);
+    }
+
+    .paperShare {
+      margin-left: auto; /* Makes it go to end of flex container */
+      margin-right: 15px;
+    }
+
+    .paperShareImg {
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    /* === START: Preview Popup :START === */
+    .paperDetailsPopup {
+      position: absolute;
+      max-width: 92%;
+      /*background-color: hsl(8, 13%, 98%);*/
+      background-color: hsl(30, 30%, 96%);
+      border: 2px solid hsl(30, 50%, 90%);
+      /*border: 2px solid hsl(240, 50%, 90%);*/
+      border-radius: 5px;
+      padding-bottom: 25px;
+
+      /*box-shadow: -8px 8px 11px 5px gray;*/
+      box-shadow: 0 0 11px 5px gray;
+    }
+
+    .previewCloseIconWrap {
+      width: 22px;
+      /*margin-left: 91%;
+      padding-top: 6px;*/
+      float: right;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .previewCloseIcon {
+      float: right;
+      height: 25px;
+      width: 25px;
+      max-width: 100%;
+      cursor: pointer;
+    }
+
+    .previewTitleLinkWrap {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .previewTitleLink {
+      font-size: 18px;
+    }
+
+    .previewPaperCats {
+      font-size: 12px;
+      margin-left: 20px;
+    }
+
+    .previewHeaderWrap {
+      /*background-color: hsl(8, 30%, 96%);*/
+      margin: 25px 5px 0px 5px;
+      border-radius: 5px;
+      padding-bottom: 2px;
+      padding-left: 5px;
+      padding-right: 5px;
+      line-height: 1.6;
+    }
+
+    .previewMeta {
+      text-align: center;
+    }
+
+    .previewPaperDate {
+      font-size: 15px;
+      font-weight: bold;
+      color: hsl(329, 90%, 60%);
+    }
+
+    .previewAuthors {
+      font-size: 14px;
+    }
+
+    .previewAbstract {
+      background-color: hsl(8, 13%, 98%);
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 8px 12px 8px 12px;
+      max-height: 260px;
+      width: 99%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: scroll;
+      border: 1px solid hsl(0, 0%, 85%);
+    }
+
+    .previewCloseLinkWrap {
+      margin-top: 15px;
+    }
+
+    .previewCloseLink {
+      font-size: 12px !important;
+    }
+
+    /* === END: Preview Popup :END === */
+
+    /* === START: App Footer :START === */
+    .footer {
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 98%;
+      text-align: center;
+    }
+
+    .exploreCatsWrap {
+      width: 97%;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .exploreCatLinkWrap, .exploreCatLinkWrapCurrent {
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 8px;
+      padding: 5px 7px;
+    }
+
+    .exploreCatLinkWrap {
+      background-color: hsl(248, 80%, 95%);
+    }
+
+    .exploreCatLinkWrapCurrent {
+      background-color: none;
+    }
+
+    a.exploreCatLink, a.exploreCatLink:link, a.exploreCatLink:visited, a.exploreCatLink:hover, a.exploreCatLink:active {
+      font-size: 14px;
+      color: black;
+      letter-spacing: 1.2px;
+      text-decoration: underline;
+    }
+
+    a.exploreCatLinkCurrent:hover, a.exploreCatLinkCurrent:active {
+      cursor: default;
+      color: black;
+    }
+
+    /* ==== START: Podcast Subscribe blocks and Popup :START === */
+    .podcastSubs {
+      position: relative;
+      background-color: hsl(12, 50%, 96%);
+      margin-top: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .podSubHeader {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .podcastFlex {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: space-around;
+      align-items: space-between;
+    }
+
+    .podcastSub {
+      margin-left: 8px;
+      margin-top: 15px;
+    }
+
+    a.podImgWrap {
+      cursor: pointer;
+    }
+
+    .podImg {
+      width: 160px;
+      height: 204px;
+      margin-top: 5px;
+    }
+
+    .podSubBtn {
+      font-size: 14px !important;
+      max-height: 30px;
+      min-width: 160px !important;
+
+      background-color: hsl(330, 90%, 90%) !important;
+      color: black !important;
+      text-transform: none !important;
+      text-decoration: none !important;
+    }
+
+    .subPopup {
+      position: absolute;
+      width: 350px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      background-color: hsl(350, 44%, 98%);
+      border: 2px solid hsl(349, 88%, 84%);
+      border-radius: 10px;
+    }
+
+    .subInstWrap {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: auto;
+      line-height: 1.2;
+      margin-right: auto;
+      width: 95%;
+    }
+
+    .subInstImgWrap {
+      float: left;
+      width: 20%;
+    }
+
+    .subInstImg {
+      /*width: 50px;
+      height: 66px;*/
+      display: none;
+    }
+
+    .subInstOverview {
+      /*float: left;*/
+      width: 98%;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .subInstOverviewLine2 {
+      margin-top: 10px;
+    }
+
+    .subInstIphone {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .podSubPopupFlex {
+      margin-top: 20px;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .podSubPopupFlex > div {
+      margin-left: 10px;
+    }
+
+    .subStepWrap {
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    .subStepCopy {
+      font-size: 16px;
+    }
+
+    .subStepPodLinkWrap {
+      font-size: 16px;
+      width: 280px;
+    }
+
+    .subPodLinkCopy {
+      margin-top: 5px;
+    }
+
+    .subStepTextWrap {
+      font-size: 16px;
+    }
+
+    .subStepNum {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .subStepImgWrap {
+      margin-top: 10px;
+    }
+
+    .subStepAppImg {
+      height: 30px;
+      width: 30px;
+    }
+
+    .subStepLibImg {
+      height: 120px;
+      width: 168px;
+    }
+
+    .subStepAddShowImg {
+      width: 154px;
+      height: 150px;
+    }
+
+    .subStepUrlImg {
+      width: 160px;
+      height: 108px;
+    }
+
+    .subStepConfirmImg {
+      width: 150x;
+      height: 158px;
+    }
+
+    .podSubLink {
+      font-weight: bold;
+    }
+   /* ==== END: Podcast Subscribe blocks and Popup :END === */
+
+    .footerNotifyWrap {
+      background-color: hsl(0, 0%, 88%);
+      padding: 15px 0 15px 0;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+
+    .footerEmailLabelWrap {
+      margin-bottom: 5px;
+    }
+
+    .footerEmailLabel {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .footerEmailInput {
+      height: 33px;
+      margin-right: 15px;
+    }
+
+    .footerEmailSubmitBtn {
+      text-transform: none !important;
+    }
+
+    .footerEmailSuccess {
+      margin-top: 10px;
+    }
+
+    .footerFeedbackWhat {
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a.notifyFeedback:link, a.notifyFeedback:visited, a.notifyFeedback:hover, a.notifyFeedback:active {
+      color: black;
+      letter-spacing: 1.2px;
+      font-size: 14px;
+      /*font-weight: bold;*/
+    }
+
+    .footerFeedbackWrap {
+      position: absolute;
+      text-align: center;
+      background-color: hsl(0, 0%, 97%);
+      border: 2px solid hsl(0, 0%, 70%);
+      border-radius: 10px;
+      height: 300px;
+      width: 350px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .footerFeedbackTextArea {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      height: 200px;
+      width: 300px;
+      font-size: 17px;
+    }
+
+    .footerSubmitFeedbackBtn {
+      text-transform: none !important;
+    }
+
+    .twitterFollowWrap {
+      margin-top: 15px;
+    }
+
+    a.footerTwitterFollow, a.footerTwitterFollow:link, a.footerTwitterFollow:visited,
+    a.footerTwitterFollow:hover, a.footerTwitterFollow:active {
+      color: hsl(230, 90%, 40%);
+      font-size: 16px;
+      text-decoration: underline;
+      padding: 6px 8px;
+      border-radius: 5px;
+    }
+
+    a.footerTwitterFollow:hover, a.footerTwitterFollow:active {
+      text-decoration: underline;
+    }
+
+    a.footerWhat {
+      color: black;
+      text-decoration: underline;
+      font-size: 17px;
+    }
+
+
+    /* === END: App Footer :END === */
+}
+/** === END: Mobile CSS :END === */
+
+/* === START: Desktop :START === */
+@media screen and (min-width: 668px) {
+    body {
+      margin-bottom: 150px;
+    }
+
+    .appHeader {
+      padding-top: 6px;
+      padding-bottom: 8px;
+      background: linear-gradient(#b3dbff, 97%, #f6accb);
+      border-bottom: 3px ridge hsl(320, 89%, 90%);
+
+      position: relative; /* To allow for abs positioning of some elems inside */
+    }
+
+    .appTitleWrap {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .appTitle {
+      font-family: "Bebas Neue", serif;
+      font-size: 48px;
+      letter-spacing: 3px;
+      font-weight: bold;
+        /*border: 2px solid black;*/
+    }
+
+    .appTitleLink:link, .appTitleLink:visited {
+      text-decoration: none;
+    }
+
+    .appTitleLink:hover, .appTitleLink:active {
+      text-decoration: underline;
+    }
+
+    .headphones {
+      font-size: 45px;
+      margin-left: 10px;
+    }
+
+    .appCaption {
+      margin-top: 2px;
+      font-family: sans-serif;
+    }
+
+    .listenCaption {
+      display: inline-block;
+      font-family: "Times New Roman", serif;
+      color: black;
+    }
+
+    .stayTuned {
+      font-size: 20px;
+      word-spacing: normal;
+      font-style: italic;
+      font-family: serif;
+    }
+
+    .stayTunedWith {
+      font-style: normal;
+      margin-left: 12px;
+      font-size: 19px;
+    }
+
+    .captionRes {
+      margin-left: 12px;
+      font-size: 19px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-family: serif;
+    }
+
+    .headerWhat {
+      position: absolute;
+      top: 42%;
+      left: 66%;
+
+      background-color: hsl(214, 50%, 59%);
+      padding: 5px 7px 5px 8px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    a.headerWhatText, a.headerWhatText:link, a.headerWhatText:visited, a.headerWhatText:hover, a.headerWhatText:active {
+      font-size: 17px;
+      font-weight: bold;
+      color: hsl(0, 0%, 95%);
+      letter-spacing: 1.5px;
+      vertical-align: -moz-baseline-with-middle;
+      vertical-align: sub;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a.headerWhatText:hover, a.headerWhatText:active {
+      text-decoration: underline;
+    }
+
+    .formErrorMsg {
+      color: hsl(0, 50%, 50%);
+    }
+
+    .faqPopup {
+      position: absolute;
+      width: 557px;
+      top: 120px;
+
+      background-color: hsl(0, 100%, 100%);
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 12px;
+
+      border: 2px solid hsl(349, 88%, 84%);
+      border-radius: 10px;
+    }
+
+    .faqCloseIcon {
+      float: right;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+
+    .faqQn {
+      font-size: 19px;
+      font-weight: bold;
+      color: hsl(214, 100%, 60%);
+    }
+
+    .faqAns {
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 28px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .faqSubtext {
+      font-size: 14px;
+    }
+
+    .faqSmile {
+      font-size: 25px;
+    }
+
+    .appNameText {
+      font-family: "Bebas Neue", serif;
+      color: hsl(320, 89%, 60%);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .appNameTextFlow {
+      font-family: "Bebas Neue", serif;
+      color: hsl(320, 89%, 60%);
+      font-weight: bold;
+    }
+
+    .faqPic {
+      height: 130px;
+      width: 130px;
+      float: right;
+      margin-left: 15px;
+    }
+
+    .appAuthorName {
+      color: gray;
+      font-weight: bold;
+    }
+
+    .emailMsgWrap {
+    }
+
+    .emailMeMsg {
+      font-size: 17px;
+      font-weight: bold;
+      color: hsl(127, 50%, 41%);
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .emailUpdateForm {
+      margin-top: 10px;
+    }
+
+    .emailUpdateInput {
+      margin-right: 10px;
+      height: 32px;
+    }
+
+    .emailUpdateButton {
+      text-transform: none !important;
+      font-size: 15px !important;
+    }
+
+    .thumbsUpEmoji {
+      font-size: 27px;
+    }
+
+    .preciousEmail {
+      color: hsl(0, 100%, 50%);
+      font-weight: bold;
+      font-style: italic;
+      font-family: serif;
+    }
+
+    .feedbackMsg {
+      font-size: 17px;
+      margin-top: 25px;
+      color: hsl(214, 100%, 60%);
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    .feedbackFlex {
+      margin-top: 10px;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    div.feedbackFlex > * {
+      margin-left: 10px;
+    }
+
+    .faqClose {
+      margin-top: 27px;
+      text-align: center;
+    }
+
+    a.faqCloseLink, a.faqCloseLink:link, a.faqCloseLink:visited, a.faqCloseLink:hover, a.faqCloseLink:active {
+      font-size: 17px !important;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .summary {
+      background-color: hsl(208, 78%, 78%);
+      margin-top: 10px;
+      width: 50%;
+      border-radius: 1em;
+      box-shadow: 5px 5px 8px 0.2em gray;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .currentPaper {
+      /* To allow for some child elems to be bottom aligned */
+      position: relative;
+      border-radius: 8px;
+
+      background-color: hsl(208, 100%, 73%);
+
+      margin-top: 8px;
+      padding-top: 18px;
+      padding-bottom: 8px;
+
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      min-height: 168px;
+      max-height: 168px;
+    }
+
+    .currentPaperBasicInfo {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .currentPaperTitleWrap {
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .currentPaperTitle {
+      font-weight: 500;
+      font-size: 22px;
+    }
+
+    .currentPaperCats {
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .currentPaperMeta {
+      margin-top: 0.7em;
+      line-height: 1.7;
+    }
+
+    .currentPaperAuthors {
+      font-size: 16px;
+      color: hsl(200, 70%, 20%, 0.9);
+      letter-spacing: 1px;
+    }
+
+    .currentPaperLinksWrap {
+      margin-left: 3%;
+      margin-top: 18px;
+      position: absolute;
+      bottom: 5px;
+    }
+
+    a.currentPaperDel {
+      color: hsl(0, 0%, 40%, 0.8);
+      vertical-align: top;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    a.currentPaperLink, a.currentPaperLink:link, a.currentPaperLink:visited, a.currentPaperLink:hover,
+    a.currentPaperLink:active {
+      font-size: 15px;
+      color: hsl(8, 100%, 28%);
+      letter-spacing: 1px;
+      margin-left: 105px;
+      cursor: pointer;
+    }
+
+    .pipeSeparator {
+      color: hsl(0, 0%, 56%);
+    }
+
+    .currentPaperArxivLink {
+      font-size: 15px;
+      color: hsl(240, 100%, 50%);
+      letter-spacing: 1px;
+    }
+
+    .playlistButtonWrap {
+      text-align: center;
+      margin-top: 17px;
+    }
+
+    .MuiButton-containedPrimary {
+      vertical-align: middle;
+    }
+
+    .emptyPlayListWrap {
+      /*width: 35%;*/
+      max-width: 667px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      margin-top: 20px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      /*background-color: hsl(0, 0%, 93%);*/
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 10px;
+
+      /*border: 1px solid red;*/
+    }
+
+    .emptyPlaylist {
+      font-size: 18px;
+    }
+
+    .emptyPlayUiListEm {
+      color: hsl(329, 90%, 60%);
+    }
+
+    .emptyPlaylistPlay {
+      margin-right: 10px !important;
+    }
+
+    .emptyPlaylistReadMore {
+      margin-left: 20px;
+    }
+
+    .emptyPlaylistReadMoreBtn {
+      font-size: 16px !important;
+      letter-spacing: 4px !important;
+      text-transform: none !important;
+    }
+
+    .emptyPlayListHeadphones {
+    }
+
+    .podcastsWrap {
+      margin-top: 20px;
+    }
+
+    .podcastSubPointer {
+      text-transform: none !important;
+      background-color: hsl(326, 70%, 61%) !important;
+      font-weight: bold;
+      color: white;
+    }
+
+    .paperProgressWrap {
+      text-align: center;
+      margin-left: 170px;
+    }
+
+    .paperProgress {
+      width: 250px;
+      -webkit-appearance: none;
+    }
+
+    .paperProgress::-moz-range-track {
+      width: 250px;
+      height: 18px;
+      background-color: hsl(210, 50%, 72%);
+    }
+
+    .paperProgress::-webkit-slider-runnable-track {
+      width: 500px;
+      height: 18px;
+      border: none;
+    }
+
+    .paperProgress::-moz-range-thumb {
+      height: 18px;
+      width: 3px;
+    }
+
+    .paperProgress::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 18px;
+        width: 3px;
+    }
+
+    .paperProgress:focus {
+        outline: none;
+    }
+
+    .currentTimestamp {
+      margin-right: 1px;
+      font-size: 12px;
+    }
+
+    .paperDuration {
+      margin-left: 1px;
+      font-size: 12px;
+    }
+
+    .currentPaperSpeedControl {
+      margin-left: 10px;
+      padding: 5px 2px 1px 0;
+      background-color: hsl(208, 100%, 73%);
+      border-radius: 5px;
+    }
+
+    .currentPaperSpeedControl > .speedSelector > .MuiSelect-selectMenu {
+      font-size: 15px;
+      color: white;
+    }
+
+    .playlistDuration {
+      margin-left: 74%;
+
+      font-size: 18px;
+      width: 24%;
+      padding-top: 5px;
+      padding-bottom: 1px;
+      border-radius: 5px;
+    }
+
+    .playlistDurationEnded {
+      border-radius: 5px;
+    }
+
+    .playlistCurrentTimestamp {
+    }
+
+    .playlistCurrentTimestampEnded {
+    }
+
+    .playlistDurationText {
+    }
+
+    .itemsLabel {
+      font-size: 1.2em;
+    }
+
+    .mainContentArea {
+      /*width: 50% !important;*/
+      max-width: 954px !important;
+
+      margin-top: 20px;
+      padding-left: 0;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .paperListNav {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 5px;
+    }
+
+    .paperListNavCenter {
+      justify-content: center;
+    }
+
+    .paperListNavBottom {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      padding-top: 5px;
+    }
+
+    .catSelectWrapTop {
+      height: 45px;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .categoriesLabel {
+      font-weight: bold;
+      font-size: 16px;
+      margin-left: 18px;
+      color: hsl(329, 90%, 60%);
+      /*vertical-align: sub;*/
+    }
+
+    .catSelector {
+      margin-left: 10px;
+    }
+
+    .catSelector.MuiInput-underline::after, .catSelector.MuiInput-underline::before {
+      border-bottom: none !important;
+    }
+
+    .catListItemLabel {
+      font-size: 12px !important;
+      vertical-align: sub !important;
+    }
+
+    .catSelectInput {
+      padding: 0 !important;
+      padding-right: 24px !important;
+      font-size: 18px !important;
+    }
+
+    .catApplyButton {
+      margin-left: 60px !important;
+    }
+
+    .speedSelector > .MuiSelect-selectMenu {
+      font-size: 14px;
+      text-align: bottom;
+      padding: 0px 22px 0 0 !important;
+    }
+
+    .categoryNavLink, .categoryNavLinkCurrent, .categoryNavLinkAll {
+      text-decoration: underline;
+      margin-right: 15px;
+      color: hsl(120, 85%, 40%);
+    }
+
+    .categoryNavLinkAll {
+      color: hsl(0, 50%, 50%);
+    }
+
+    .categoryNavLinkCurrent {
+      text-decoration: none;
+      color: black;
+    }
+
+    .searchInput {
+      margin-left: 35px;
+      height: 30px;
+      width: 250px;
+      /*width: 9em;*/
+      font-size: 18px;
+    }
+
+    .searchInputOnly {
+      display: inline-block;
+      align-self: center;
+    }
+
+    .searchBtn {
+      margin-left: 15px !important;
+      text-transform: none !important
+    }
+
+    .searchDisplayMessage {
+      width: 85%;
+      margin-left: 20%;
+      margin-top: 11px;
+      margin-bottom: 13px;
+    }
+
+    .searchShowMsg {
+      font-size: 17px;
+    }
+
+    .searchDisplayQuery {
+      font-size: 16px;
+      color: hsl(0, 0%, 20%);
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-left: 6px;
+    }
+
+    a.searchClearLink,
+    a.searchClearLink:link, a.searchClearLink:visited, a.searchClearLink:hover, a.searchClearLink:active  {
+      margin-left: 45px;
+      font-size: 16px;
+      color: hsl(0, 100%, 39%);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .pagerBoxWrapCommon {
+      width: 250px;
+      height: 46px;
+      background-color: hsl(41, 0%, 94%);
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pagerBoxWrapTop {
+    }
+
+    .pagerBoxWrapBottom {
+    }
+
+    .pagerBox {
+      background-color: white;
+      align-self: center;
+      padding: 5px;
+      border: 1px solid hsl(240, 50%, 90%);
+    }
+
+    .pagerNextPrev.MuiButton-root.MuiButton-text {
+      text-transform: none !important;
+
+      color: hsl(345, 80%, 40%) !important;
+      font-weight: bold;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      padding: 0;
+    }
+
+    .pagerNextPrevBottom.MuiButton-root.MuiButton-text {
+      font-size: 17px !important;
+    }
+
+    .pagerNextPrev.MuiButton-root.MuiButton-text.Mui-disabled {
+      color: hsl(333, 100%, 90%) !important;
+    }
+
+    .pagerNextPrev:active,.pagerNextPrev:focus {
+    }
+
+    .pagerNextPrevDisabled {
+      /*visibility: hidden;*/
+    }
+
+    .pagerText {
+      margin-left: 10px;
+      font-size: 14px;
+      color: gray;
+    }
+
+    .pagerNext {
+      margin-left: 10px !important;
+    }
+
+    .playlist {
+    }
+
+    .trackChangeIconPrevWrap {
+      display: inline-block;
+      width: 40px;
+      height: 34px;
+      margin-right: 60px;
+    }
+
+    .trackChangeIconNextWrap {
+      display: inline-block;
+      width: 40px;
+      height: 34px;
+      margin-left: 60px;
+    }
+
+    .playlistNextImg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .playButton, .playButtonPause {
+    }
+
+    .playButtonPause {
+      width: 148px;
+    }
+
+    a.playlistPrev:link, a.playlistPrev:visited,
+    a.playlistNext:link, a.playlistNext:visited {
+    }
+
+    a.playlistPrev:hover, a.playlistPrev:active,
+    a.playlistNext:hover, a.playlistNext:active {
+    }
+
+    /* ===== START: The Paper list at the bottom of screen ===== */
+    .paperDisplay {
+    }
+
+    .MuiTableCell-root {
+      padding: 14px 16px !important;
+    }
+
+    tbody.MuiTableBody-root tr {
+      border-bottom: 1px solid hsl(240, 50%, 90%);
+    }
+
+    tbody.MuiTableBody-root tr:nth-child(odd) {
+      background-color: hsl(38, 54%, 98%);
+      /*border-left: 2px solid hsl(0, 100%, 70%);*/
+      border-left: 2px solid hsl(42, 100%, 70%);
+    }
+
+    tbody.MuiTableBody-root tr:first-child {
+      border-top: 1px solid hsl(240, 50%, 90%);
+    }
+
+    tbody.MuiTableBody-root tr:nth-child(even) {
+      background-color: hsl(240, 50%, 100%);
+      border-left: 2px solid hsl(234, 50%, 78%);
+    }
+
+    .paperTitleRow {
+      line-height: 1.5;
+    }
+
+    .paperTitle {
+      font-size: 20px;
+    }
+
+    .paperCategories {
+      font-size: 13px;
+      margin-left: 20px;
+    }
+
+    .paperListMoreInfo {
+      margin-left: 65px;
+      vertical-align: text-bottom;
+    }
+
+    .paperlistDurationInfo {
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .paperListSourceLink {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: hsl(240, 100%, 35%);
+    }
+
+    .paperMeta {
+      margin-top: 7px;
+      margin-bottom: 1em;
+      line-height: 1.6;
+    }
+
+    .paperSource {
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: hsl(346, 70%, 50%);
+    }
+
+    .sourceAuthorSeparator {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    .paperAuthors {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    a.paperAuthorsEllipsis:link,a.paperAuthorsEllipsis:visited {
+      font-size: 20px;
+      margin-left: 5px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .actionLinks {
+      height: 30px;
+    }
+
+    .paperActionWrap {
+      display: inline-block;
+      width: 160px;
+    }
+
+    .paperAction {
+      font-size: 14px !important;
+      color: darkblue !important;
+      font-weight: bold;
+
+      text-transform: none !important;
+      text-decoration: underline !important;
+
+      background-color: hsl(215, 100%, 95%) !important;
+      border: 1px solid hsl(215, 100%, 90%) !important;
+    }
+
+    .paperActionDelWrap {
+      padding-top: 9px;
+    }
+
+    .paperActionDel {
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: gray !important;
+    }
+
+    a.paperAction:link, a.paperAction:visited,
+    a.paperAction:hover, a.paperAction:active {
+    }
+
+    .paperActionListenWrap {
+      display: inline-block;
+      /*width: 90px;*/
+      width: 45px;
+      margin-left: 72px !important;
+    }
+
+    .paperActionListen {
+      padding-top: 5px !important;
+      padding-bottom: 4px !important;
+      padding-left: 17px !important;
+      padding-right: 17px !important;
+      background-color: hsl(231, 29%, 51%) !important;
+      color: hsl(0, 0%, 100%) !important;
+      font-size: 13px !important;
+      font-weight: bold !important;
+      letter-spacing: 1.5px !important;
+    }
+
+    .paperActionPause {
+      padding-top: 5px !important;
+      padding-bottom: 4px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      background-color: hsl(170, 70%, 32%) !important;
+      color: hsl(0, 0%, 100%) !important;
+      font-size: 13px !important;
+      font-weight: bold !important;
+      letter-spacing: 1.5px !important;
+    }
+
+    .paperPlayBtnImg {
+      height: 35px;
+      width: 35px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    .paperPlay {
+      margin-left: 5px;
+    }
+
+    .paperPlayProgress {
+      width: 180px;
+      -webkit-appearance: none;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .paperPlayProgress::-moz-range-track {
+      width: 180px;
+      height: 12px;
+    }
+
+    .paperPlayProgress::-webkit-slider-runnable-track {
+      width: 180px;
+      height: 12px;
+      border: none;
+    }
+
+    .paperPlayProgress::-moz-range-thumb {
+      height: 12px;
+      width: 3px;
+    }
+
+    .paperPlayProgress::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 12px;
+        width: 3px;
+    }
+
+    .paperPlayProgress:focus {
+        outline: none;
+    }
+
+    .speedSelector {
+      margin-left: 15px;
+    }
+
+    .speedSelector.MuiInput-underline::after, .speedSelector.MuiInput-underline::before {
+      border-bottom: none !important;
+    }
+
+    .speedSelector > .MuiSelect-selectMenu {
+      font-size: 14px;
+      text-align: bottom;
+      padding: 0px 22px 0 0 !important;
+    }
+
+    a.paperPreviewLink, a.paperPreviewLink:link,a.paperPreviewLink:visited,
+    a.paperPreviewLink:hover,a.paperPreviewLink:active {
+      cursor: pointer;
+      text-decoration: underline;
+      color: hsl(8, 100%, 28%);
+      letter-spacing: 1px;
+    }
+
+    .paperShareWrap {
+      position: relative;
+    }
+
+    .paperShare {
+      margin-left: 113px; /* Makes it go to end of flex container */
+      margin-right: 15px;
+    }
+
+    .paperShareImg {
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .paperSharePopup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 180px;
+      background-color: hsl(0, 100%, 100%);
+      border: 2px solid hsl(0, 0%, 75%);;
+      border-radius: 5px;
+      padding-top: 15px;
+      text-align: center;
+    }
+
+    .shareMenuItem {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a.shareMenuItemLink, a.shareMenuItemLink:link, a.shareMenuItemLink:visited,
+    a.shareMenuItemLink:hover, a.shareMenuItemLink:active {
+      color: hsl(228, 50%, 50%);
+      font-size: 16px;
+    }
+
+    a.shareMenuItemLink:hover, a.shareMenuItemLink:active {
+      cursor: pointer;
+    }
+
+    /* === START: Preview Popup :START === */
+    .paperDetailsPopup {
+      position:absolute;
+      max-width: 35em;
+
+      background-color: hsl(0, 0%, 100%);
+      border: 1px solid hsl(240, 50%, 90%);
+      border-radius: 10px;
+      padding-bottom: 25px;
+      box-shadow: -8px 8px 11px 5px gray;
+    }
+
+    .previewCloseIconWrap {
+      width: 22px;
+      height: 12px;
+      margin-left: 95%;
+      padding-top: 4px;
+    }
+
+    .previewCloseIcon {
+      max-width: 100%;
+      cursor: pointer;
+    }
+
+    .previewTitleLinkWrap {
+      text-align: center;
+    }
+
+    .previewTitleLink {
+      font-size: 18px;
+    }
+
+    .previewPaperCats {
+      font-size: 12px;
+      margin-left: 25px;
+    }
+
+    .previewHeaderWrap {
+      background-color: hsl(8, 30%, 96%);
+      margin: 15px 20px 10px 20px;
+      border-radius: 5px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      line-height: 1.6;
+    }
+
+    .previewMeta {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .previewPaperDate {
+      font-weight: bold;
+      color: hsl(329, 90%, 60%);
+    }
+
+    .previewAuthors {
+    }
+
+    .previewAbstract {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 0px 30px 10px 30px;
+    }
+
+    a.previewCloseLink:link,a.previewCloseLink:visited,
+    a.previewCloseLink:hover,a.previewCloseLink:active {
+      color: black;
+      text-decoration: underline;
+    }
+
+    /* === END: Preview Popup :END === */
+
+    /* === END: The paper list at the bottom of the screen :END === */
+
+    /* === START: App Footer :START ==== */
+
+    .footer {
+      /*width: 50%;*/
+      max-width: 954px;
+
+      margin-top: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .exploreCatsWrap {
+      width: 71%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+    }
+
+    .exploreCatLinkWrap, .exploreCatLinkWrapCurrent {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 7px 10px;
+    }
+
+    .exploreCatLinkWrap {
+      background-color: hsl(248, 80%, 91%);
+    }
+
+    .exploreCatLinkWrapCurrent {
+      background-color: none;
+    }
+
+    a.exploreCatLink:link, a.exploreCatLink:visited, a.exploreCatLink:hover, a.exploreCatLink:active {
+      font-size: 16px;
+      color: black;
+      /*letter-spacing: 1.2px;*/
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a.exploreCatLinkCurrent:link, a.exploreCatLinkCurrent:visited, a.exploreCatLinkCurrent:hover, a.exploreCatLinkCurrent:active {
+      text-decoration: none;
+    }
+
+    a.exploreCatLinkCurrent:link, a.exploreCatLinkCurrent:hover, a.exploreCatLinkCurrent:active {
+      cursor: default;
+      color: black;
+    }
+
+    a.exploreCatLink:hover, a.exploreCatLink:active {
+      text-decoration: underline;
+    }
+
+    /* ==== START: Podcast Subscribe blocks and Popup :START === */
+    .podcastSubs {
+      position: relative;
+      background-color: hsl(12, 50%, 96%);
+      margin-top: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .podSubHeader {
+      /*margin-top: 35px;*/
+      font-size: 22px;
+      /*font-weight: bold;*/
+      text-align: center;
+      /*color: hsl(326, 70%, 61%);*/
+      /*text-decoration: underline;*/
+    }
+
+    .podcastFlex {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-items: space-between;
+    }
+
+    .podcastSub {
+      margin-left: 8px;
+      margin-right: 8px;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .podTitle {
+      height: 40px;
+      width: 30px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+
+      font-size: 17px;
+      line-height: 1.3;
+      /*color: hsl(0, 70%, 40%);*/
+      color: black;
+
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+    a.podImgWrap {
+      cursor: pointer;
+    }
+
+    .podImg {
+      /*max-width: 200px;
+      max-height: 256px;*/
+      max-width: 170px;
+      max-height: 217px;
+      margin-top: 5px;
+    }
+
+    .podSubPopupFlex {
+      margin-top: 30px;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: center;
+    }
+
+    .podSubPopupFlex > div {
+      margin-bottom: 30px;
+      margin-left: 10px;
+    }
+
+    .podSubBtn {
+      font-size: 16px !important;
+      max-height: 30px;
+      min-width: 130px !important;
+
+      background-color: hsl(330, 90%, 90%) !important;
+      color: black !important;
+      text-transform: none !important;
+      text-decoration: underline !important;
+    }
+
+    .subPopup {
+      position: absolute;
+      height: 900px;
+      width: 900px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 10px;
+      background-color: hsl(350, 44%, 98%);
+      border: 2px solid red;
+      border-radius: 5px;
+    }
+
+    .subInstWrap {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: auto;
+      line-height: 1.7;
+      margin-right: auto;
+      width: 95%;
+    }
+
+    .subInstImgWrap {
+      float: left;
+      width: 20%;
+    }
+
+    .subInstImg {
+      width: 150px;
+      height: 180px;
+    }
+
+    .subInstOverview {
+      float: left;
+      width: 70%;
+      margin-top: 20px;
+    }
+
+    .subInstIphone {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .subStepWrap {
+      line-height: 1.5;
+    }
+
+    .subStepCopy {
+      font-size: 18px;
+      min-height: 40px;
+      width: 280px;
+    }
+
+    .subStepPodLinkWrap {
+      font-size: 18px;
+      width: 280px;
+    }
+
+    .subPodLinkCopy {
+      margin-top: 10px;
+    }
+
+    .subStepTextWrap {
+      font-size: 18px;
+      min-height: 50px;
+      width: 280px;
+    }
+
+    .subStepNum {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .subStepImgWrap {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .subStepAppImg {
+      height: 100px;
+      width: 100px;
+    }
+
+    .subStepLibImg {
+      height: 180px;
+      width: 250px;
+    }
+
+    .subStepAddShowImg {
+      width: 270px;
+      height: 250px;
+    }
+
+    .subStepUrlImg {
+      width: 160px;
+      height: 108px;
+    }
+
+    .subStepConfirmImg {
+      width: 160px;
+      height: 168px;
+    }
+
+    .podSubLink {
+      font-weight: bold;
+    }
+   /* ==== END: Podcast Subscribe blocks and Popup :END === */
+
+    .footerNotifyWrap {
+      max-width: 775px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+
+      background-color: hsl(0, 0%, 90%);
+      padding: 30px 0 30px 0;
+
+      border-radius: 12px;
+    }
+
+    .footerEmailLabelWrap {
+      margin-bottom: 15px;
+    }
+
+    .footerEmailLabel {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .footerEmailInput {
+      height: 33px;
+      margin-right: 15px;
+      font-size: 17px;
+    }
+
+    .footerEmailSubmitBtn {
+      text-transform: none !important;
+    }
+
+    .footerEmailSuccess {
+      margin-top: 20px;
+    }
+
+    .footerFeedbackWhat {
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    /*a.notifyFeedback, a.notifyFeedback:link, a.notifyFeedback:visited, a.notifyFeedback:hover, a.notifyFeedback:active {*/
+    a.notifyFeedback {
+      color: black;
+      letter-spacing: 1.2px;
+      cursor: pointer;
+    }
+
+    .footerFeedbackWrap {
+      position: absolute;
+      text-align: center;
+      background-color: hsl(0, 0%, 92%);
+      border: 2px solid hsl(0, 0%, 70%);
+      border-radius: 10px;
+      height: 380px;
+      width: 500px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .footerFeedbackTextArea {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      height: 270px;
+      width: 450px;
+      font-size: 17px;
+    }
+
+    .footerSubmitFeedbackBtn {
+      text-transform: none !important;
+    }
+
+    .twitterFollowWrap {
+      margin-top: 38px;
+    }
+
+    a.footerTwitterFollow, a.footerTwitterFollow:link, a.footerTwitterFollow:visited,
+    a.footerTwitterFollow:hover, a.footerTwitterFollow:active {
+      color: hsl(240, 50%, 100%);
+      font-size: 16px;
+      background-color: hsl(240, 80%, 66%);
+      text-decoration: none;
+      padding: 9px 10px;
+      border-radius: 7px;
+    }
+
+    a.footerTwitterFollow:hover, a.footerTwitterFollow:active {
+      text-decoration: underline;
+    }
+
+    a.footerWhat {
+      color: black;
+      text-decoration: underline;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* === END: App Footer :END ==== */
+}
+/* === END: Desktop :END === */

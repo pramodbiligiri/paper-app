@@ -1,0 +1,29 @@
+# This file may be outdated, because the app has not been tested on GAE for a long time.
+runtime: java11
+instance_class: F2
+
+entrypoint: java -Dspring.profiles.active=gcp -jar paper-app-0.0.1-SNAPSHOT.jar
+
+# For scaling flags, refer:
+# 1. Great blog post:
+# https://levelup.gitconnected.com/dont-accept-the-defaults-how-to-reduce-costs-with-google-app-engine-autoscaling-316af4804a01
+# 2. GAE docs: section on Scaling in https://cloud.google.com/appengine/docs/standard/java11/config/appref
+# and Overview: https://cloud.google.com/appengine/docs/standard/java11/how-instances-are-managed
+# 3. Section called Scaling in App Engine Standard in book GCP in Action
+# https://learning.oreilly.com/library/view/google-cloud-platform/9781617293528/kindle_split_022.html
+automatic_scaling:
+  max_concurrent_requests: 50
+  target_cpu_utilization: 0.8
+
+handlers:
+  - url: (/.*)
+    static_files: BOOT-INF/classes/static/static\1
+    upload: BOOT-INF/classes/static/static/.*\.(gif|png|jpg|svg|ico|css|js|html)$
+    require_matching_file: True
+    login: optional
+    secure: optional
+
+# To ensure WarmupReqController is invoked on an instance before new reqs are sent to it
+# https://cloud.google.com/appengine/docs/standard/java11/configuring-warmup-requests
+inbound_services:
+  - warmup

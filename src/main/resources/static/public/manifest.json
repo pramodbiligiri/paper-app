@@ -1,0 +1,20 @@
+{
+  "short_name": "Paper Time",
+  "name": "Paper Time - listen to abstracts",
+  "icons": [
+    {
+      "src": "pt-icon-1.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "pt-apple-touch-1.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

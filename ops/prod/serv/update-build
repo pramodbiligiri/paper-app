@@ -1,0 +1,19 @@
+#!/bin/bash
+
+newdir=$1;
+
+echo "Setting up build in $newdir";
+
+oldpid=`ps -ef | grep java | grep "app.identifier=ttsapp" | grep -v grep | awk '{print $2}'`;
+
+kill -9 $oldpid;
+
+cd $newdir;
+unzip -q '*.jar';
+
+rm -f /home/webapp/builds/latest;
+ln -sf $newdir /home/webapp/builds/latest;
+
+echo "Launching webapp from build in $newdir";
+
+PORT=8080 nohup java -Xms6144m -Xmx6144m -Dspring.profiles.active=het -Dapp.identifier=ttsapp -jar paper-app-0.0.1-SNAPSHOT.jar > app.log 2>&1&

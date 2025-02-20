@@ -1,0 +1,39 @@
+# Access the id_github file from Secret Manager, and setup SSH
+steps:
+  - name: 'gcr.io/cloud-builders/git'
+    secretEnv: ['APPTTS_REPO_READ_KEY']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        echo "$$APPTTS_REPO_READ_KEY" >> /root/.ssh/id_rsa
+        chmod 400 /root/.ssh/id_rsa
+        cp known_hosts.github /root/.ssh/known_hosts
+    volumes:
+      - name: 'ssh'
+        path: /root/.ssh
+
+  # Clone the repository
+  - name: 'gcr.io/cloud-builders/git'
+    args:
+      - clone
+      - --recurse-submodules
+      - git@github.com:pramodbiligiri/paper-app
+    volumes:
+      - name: 'ssh'
+        path: /root/.ssh
+
+  - name: 'maven:3.6.3-jdk-11'
+    secretEnv: ['JFROG_ACCESS_TOKEN']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        JFROG_USERNAME=pramodbiligiri@gmail.com JFROG_PASSWORD="$$JFROG_ACCESS_TOKEN" mvn -s .github/workflows/maven-settings.xml package deploy
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/majestic-hybrid-308506/secrets/JFROG_ACCESS_TOKEN/versions/latest
+      env: 'JFROG_ACCESS_TOKEN'
+    - versionName: projects/majestic-hybrid-308506/secrets/gh-id-for-cloud-build/versions/latest
+      env: 'APPTTS_REPO_READ_KEY'

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Create a directory to store the new version of the app
+newdir=`date +%s`;
+mkdir $HOME/builds/$newdir;
+echo $HOME/builds/$newdir;
