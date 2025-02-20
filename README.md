@@ -1,13 +1,15 @@
 paper-app
 =======
-Webapp for listing to paper abstracts from Arxiv.
+Webapp for listening to paper abstracts from Arxiv.
 
 ### To compile
 $ mvn clean package
 
 ### To run locally
+```
 $ export GOOGLE_APPLICATION_CREDENTIALS=/path/to/google-app-creds.json
 $ mvn spring-boot:run -Pdev
+```
 
 ### To deploy to server  
 See file deploy-het.sh
