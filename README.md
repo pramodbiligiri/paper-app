@@ -1,14 +1,18 @@
 paper-app
 =======
-Webapp for listening to paper abstracts from Arxiv.
+Webapp for listening to paper abstracts from [Arxiv](https://www.arxiv.org). See sample screenshot below  
+
+<img src="papertime-pic-1.png" alt="Screenshot" width="600"/>
 
 ### To compile
 $ mvn clean package
 
 ### To run locally
+This launches the web app using a Postgres instance running within docker,
+seeded with some static data. 
 ```
-$ export GOOGLE_APPLICATION_CREDENTIALS=/path/to/google-app-creds.json
-$ mvn spring-boot:run -Pdev
+$ (Optional) export GOOGLE_APPLICATION_CREDENTIALS=/path/to/google-app-creds.json
+$ mvn spring-boot:run -Dspring.profiles.active=dev
 ```
 
 ### To deploy to server  
